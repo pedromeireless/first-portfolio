@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+* {box-sizing: border-box;font-family: 'Heebo', 'sans-serif';}
+
+:root {
+    --main-background-color: #ffffff;
+    --details-color: #696969;
+}
+
+body {background: linear-gradient(90deg, #757575 0%, #3D5179 100%); margin: 0PX;}
+
+.flextest {
+    display: flex;
+}
+
+
+/* HEADER AREA */
+header {
+    background-color: var(--main-background-color);
+    height: 10rem;
+    box-shadow: -1px 1px 11px 0px #1f1f1f;
+    border-radius: 0px 0PX 15px 15px;
+}
+.container img {
+    width: 6.4rem;
+    height: 6.4rem;
+    transition: all 0.3s;
+}
+.container {
+    max-width: 93.938rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    position: relative;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav ul a {
+  transition: 0.3s ease-in-out;
+  color: #000000;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 4px solid var(--details-color);
+  border-bottom: 4px solid var(--details-color);
+  padding: 20px 0;
+  margin: 0 20px;
+}
+nav ul a:hover {
+  border-top: 4px solid #3a3a3a;
+  border-bottom: 4px solid #3a3a3a;
+  padding: 6px 0; 
+}
+nav ul li {
+    padding: 1.25rem;
+    font-weight: 300;
+    font-size: 1.1rem;
+    font-family: 'Heebo', sans-serif;
+}
+.hamburger-lines {
+    transition: all 1s;
+    display: block;
+    margin-right: 15px;
+    height: 36px;
+    width: 46px;
+}
+.line {
+    transition: all 1s;
+    margin-top: 5px;
+    height: 8px;
+    width: 100%;
+    background-color: #727272;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+.menu-opened {
+    display: flex;
+    margin-top: 50px;
+    position: absolute;
+    top: 50%;
+    background-color: #a7a7a7;
+    width: 100%;
+    animation-name: aparecer;
+    animation-duration: 1s;
+    z-index: 2;
+}
+@keyframes aparecer {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+.menu-opened ul {
+    margin-bottom: 0px;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    border-radius: 5px;
+    margin-top: 0px;
+}
+.menu-opened ul li {
+    padding: 40px !important;
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#closeButton {
+    margin-right: 20px;
+    display: none;
+    width: 35px;
+    height: 35px;
+    background-image: url(../imgs/close.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* END OF HEADER AREA */
+
+
+/* MAIN AREA */
+main {
+    max-width: 100.188rem;
+    height: 50rem;
+    background-color: var(--main-background-color);
+    border-radius: 15px;
+    box-shadow: -1px 1px 11px 0px #1f1f1f;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 24px;
+    display: flex;
+    padding: 0px 50px 0px 50px;
+}
+.main-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 2;
+    flex-wrap: wrap;
+}
+
+.main-text-area {
+    width: 600px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s;
+}
+.main-text-area h3, h4, h1 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.main-text-area h3, h4 {
+    font-family: 'Heebo', 'sans-serif';
+    font-weight: 200;
+    font-size: 16px;
+}
+.main-text-area h1 {
+    font-family: 'Heebo', 'sans-serif';
+    font-weight: 900;
+}
+.main-img {
+    width: 400px;
+    height: 400px;
+    background-image: url(../imgs/person.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.icon-container-area {
+    display: flex;
+    margin-top: 50px;
+    gap: 50px;
+}
+.icon-container-area img {
+    width: 30px;
+    height: 30px;
+}
+nav i {
+    --fa-animation-duration: 1s; 
+    --fa-animation-delay: 3s;
+    --fa-animation-timing: ease-in-out;
+    color: #000
+}
+/* END OF MAIN AREA */
+
+/* PROJECTS AREA */
+    .big-container {  /* WORKS FOR EVERY CONTAINER */
+        max-width: 100.188rem;
+        height: auto;
+        background-color: var(--main-background-color);
+        border-radius: 15px;
+        box-shadow: -1px 1px 11px 0px #1f1f1f;
+        margin: auto;
+        margin-top: 10px;
+        gap: 50px;
+        font-size: 24px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 50px 0px 50px;
+        transition: all 1s;
+    }
+    
+/* This class works for every title section */
+    .title-area {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        transition: all 1s;
+    }
+    .title-area h2, h3 {
+        margin: 1px;
+    }
+    .title-area h3 {
+        font-weight: 300;
+        font-size: 23px;
+    }
+    .widget-bar {
+        margin-top: 30px;
+        width: 220px;
+        height: 3px;
+        background-color: var(--details-color);
+        border-radius: 15px;
+    }
+
+/* projects div */
+.project-links-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex: 2;
+}
+.projects-links {
+    width: 600px;
+    padding: 5px;
+}
+.projects-thumbnail {
+    background-image: url(../imgs/churrascometro.png);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    width: 590px;
+    border-radius: 5px;
+}
+.project-title {
+    margin-bottom: 15px;
+}
+.project-title h4 {
+    font-weight: 700;
+    font-size: 26px;
+    font-family: 'Heebo', 'sans-serif';
+}
+.project-title h5 {
+    font-weight: 200;
+    font-family: 'Heebo', 'sans-serif';
+    font-size: 14px;
+}
+.project-title h4, h5 {
+    margin: 0;
+}
+.project-button {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.project-button button {
+    padding: 10px;
+    width: 45%;
+    background: transparent;
+    border: 1px solid #000000;
+    outline: none;
+    transition: 0.5s ease-in-out;
+    font-family: 'Heebo', 'sans-serif';
+}
+button:hover {
+    transition: 0.5s ease-in-out;
+    background: var(--details-color);
+    color: #000000;
+  }
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgb(36, 36, 36);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
+
+/* END OF PROJECTS AREA */
+
+/* ABOUT ME AREA */
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-me-text {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    justify-content: flex-start;
+    padding-top: 30px;
+}
+.about-me-text p {
+    font-size: 18px;
+    margin-top: 0%;
+}
+.about-me-photo {
+    width: 600px;
+    height: 600px;
+    background-image: url(../imgs/person.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.habilites {
+    display: flex;
+    justify-content: flex-start;
+}
+.habilites ul {
+    list-style: none;
+    padding-right: 50px;
+    padding-left: 0px;
+}
+.habilites h3 {
+    margin: 0px;
+}
+.habilites ul li {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+/* CONTACT ME AREA */
+.contact-me-container {
+    width: 50%;
+}
+.contact-me-container form input {
+    min-width: 95%;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    border: 2px solid #1D1D1E;
+    border-radius: 2px;
+    transition: all 1s;
+}
+.contact-me-container form input:hover, textarea:hover {
+    transform: scale(1.01);
+}
+.contact-me-container form textarea {
+    min-width: 95%;
+    max-height: 200px;
+    min-height: 200px;
+    border: 2px solid #1D1D1E;
+    border-radius: 2px;
+    transition: all 1s;
+}
+.contact-me-container form label {
+    color: #111111;
+}
+.contact-me-container button {
+    width: 95%;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    font-weight: 800;
+}
+.contact-me-container button:hover {
+    color: #000000;
+    background-color: var(--details-color); 
+}
+
+
+/* FOOTER AREA */
+footer {
+    margin-top: 20px;
+    background-color: #1D1D1E;
+    height: 10rem;
+    box-shadow: -1px 1px 11px 0px #1f1f1f;
+    border-radius:  15px 15px 0px 0px;
+}
+.foot {
+    padding: 0px 50px 0px 50px;
+}
+.footer-text {
+    color: #E5E5E5;
+}
+.icon-container-area-footer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+}
+.icon-container-area-footer a i {
+    color: #E5E5E5;
+}
+
+/* RESPONSIVE AREAS */
+@media only screen and (max-width: 1439px) {
+    .about-me-text {
+        width: 100%;
+    }
+    .container img {
+        margin-left: 50px;
+    }
+}
+@media only screen and (max-width: 1310px) {
+    
+    .project-links-container {
+        justify-content: center;
+        transition: all 2s;
+    }
+    .title-area h2, h3 {
+        text-align: center;
+        
+    }
+    .title-area h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .widget-bar, .about-me-photo{
+        margin: auto;
+    }
+    .main-text-area, .main-img {
+        align-items: center;
+        margin: auto;
+        transition: all 1s;
+    }
+    .about-me-habilites {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-me-habilites {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .habilites, .habilites ul{
+        padding: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 768px) {
+    nav ul a {
+        border: none;
+    }
+    .projects-thumbnail {
+        width: 100%;
+    }
+    .contact-me-container form input, textarea {
+        max-width: 100%;
+    }
+   
+    .contact-me-container {
+        width: 100%;
+        transition: all 1s;
+    }
+}
+@media only screen and (max-width: 495px) {
+    .main-text-area h1, h4 {
+        text-align: center;
+    }
+    .big-container {
+        padding: 0px 30px 0px 30px;
+    }
+    .foot {
+        flex-direction: column;
+    }
+    .footer-text {
+        text-align: center;
+    }
+    .icon-container-area-footer {
+        margin-bottom: 4px;
+    }
+    .about-me-photo {
+        height: 500px;
+    }
+    .project-title h5 {
+        text-align: center;
+    }
+    .container img {
+        margin-left: 10px;
+    }
+}
+@media only screen and (max-width: 424px) {
+    .main-text-area, .icon-container-area, .main-area {
+        width: 100%;
+    }
+    .main-text-area h3 {
+        margin-bottom: 0px;
+    }
+    .main-text-area h1 {
+        margin-top: 1px;
+    }
+    .icon-container-area {
+        justify-content: center;
+        gap: 15px;
+    }
+    .main-img {
+        height: 300px;
+    }
+}
